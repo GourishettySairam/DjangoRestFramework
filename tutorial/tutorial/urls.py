@@ -24,6 +24,6 @@ schema_view = get_swagger_view(title='Django Rest Framework')
 urlpatterns = [
     path('', include('snippets.urls')),
     path('admin/', admin.site.urls),
-	path('documentation/', schema_view)
-	
+	path('documentation/', schema_view),
+	path('api-auth/', include('rest_framework.urls')),
 ]
